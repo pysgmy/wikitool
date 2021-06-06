@@ -22,9 +22,6 @@
 /* Filter needs to reside on `html`, see https://phabricator.wikimedia.org/T221425#5153917 */
 html,
 /* All other selectors have `filter` double-applied to turn back to “normal” by inheritance */
-html img,
-html video,
-html svg,
 html iframe,
 html .mw-no-invert,
 html .mwe-math-element,
@@ -39,6 +36,14 @@ html .ext-related-articles-card-list .ext-related-articles-card-thumb {
 	filter: invert( 1 ) hue-rotate( 180deg );
 }
 
+	
+html img,
+html video,
+html svg,
+{
+	filter: brightness(0.3);
+}
+	
 /* Reset overrides, needed where double application above isn't working. */
 /* Vector modern */
 html .skin-vector .mw-logo-wordmark,
@@ -65,8 +70,14 @@ html #siteNotice #centralNotice .cnotice {
 	background-color: #ddd;
 }
 
-html #footer-info-copyright{
-	background: transparent;
+html #p-logo a.mw-wiki-logo{
+	background-image: url('https://img.moegirl.org.cn/common/2/21/ZhMoegirl15.2.png');
+	background-color: rgba(255,255,255,0.73)
+}
+	
+html #footer-info-copyright
+html .skin-vector{
+	background: #000;
 }
 
 /* Borders */
