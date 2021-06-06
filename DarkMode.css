@@ -65,6 +65,10 @@ html #siteNotice #centralNotice .cnotice {
 	background-color: #ddd;
 }
 
+html #footer-info-copyright{
+	background-color: #000;
+}
+
 /* Borders */
 html body,
 html h1,
